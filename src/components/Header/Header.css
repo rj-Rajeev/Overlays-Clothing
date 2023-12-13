@@ -1,0 +1,138 @@
+.header.white{
+    /* background-color: rgb(255, 255, 255); */
+    color: black;
+    position: fixed;
+    top: -5%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    /* top: 5%; */
+}
+.header.white .head{
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid black;
+    transition: all ease 1s;
+
+    
+}
+.head{
+    width: 100vw;
+    height: 15vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 5px;
+    /* position: fixed ; */
+}
+.offer{
+    padding: 5px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* position: fixed; */
+}
+.offer h4{
+    font-size: .8rem;
+    font-weight: 100;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+}
+.header.white .search img{
+    filter: brightness(1) invert(0);
+}
+.header.white .search input{
+    color: black;
+}
+.search input{
+    background-color: transparent; 
+    color: white;
+    border: none;
+    font-size: 1rem;
+    width: 300px;
+}
+.search input:focus{
+    outline: none;
+}
+.header.white .logo img{
+    filter: brightness(1) invert(0);
+}
+.logo img{
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+}
+
+.header.white .headLinks{
+    color: black;
+}
+.headLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+    gap: 10px;
+    position: relative;
+
+}
+.header.white .headLinks .counter{
+    background-color: black;
+    color: white;
+    transition: all ease 1s;
+}
+
+.header.white .headLinks img, .search img{
+    filter: brightness(1) invert(0);
+}
+.headLinks img, .search img{
+    filter: brightness(0) invert(1);
+}
+.counter{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: .8rem;
+    position: absolute;
+    right: -5%;
+    top: -10%;
+}
+.header.white .NavLinks{
+
+    background: white;
+    transition: all ease 1s;
+}
+.header.white .NavLinks a{
+    color: black;
+}
+.NavLinks{
+    height: 8vh;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+.NavLinks a{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}

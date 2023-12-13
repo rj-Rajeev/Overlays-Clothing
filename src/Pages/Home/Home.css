@@ -1,0 +1,49 @@
+.bgi{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(src/assets/banner01.webp);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.productshow{
+    width: 100vw;
+    height: 450px;
+    padding: 0 8px;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-color: none;
+}
+
+
+.banner2 img{
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+.halfbanners{
+    width: 100vw;
+    display: flex;
+}
+
+.halfbanners img{
+    width: 50vw;
+    margin: 4px;
+}
+
+.banner3 {
+    width: 100vw;
+}
+
+.banner3 img{
+    width: 100vw;
+    margin: 4px;
+}
+
+.banner4 img{
+    width: 100vw;
+    margin: 4px;;
+}

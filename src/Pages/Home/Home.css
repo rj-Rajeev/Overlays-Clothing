@@ -13,9 +13,13 @@
     height: 450px;
     padding: 0 8px;
     display: flex;
-    overflow-x: auto;
-    scrollbar-color: none;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
 }
+.productshow::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+  }
+  
 
 
 .banner2 img{

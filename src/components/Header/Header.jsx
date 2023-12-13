@@ -2,25 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
-    const [scrolled, setScrolled] = useState(false);
-
-
-    const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-    }, [scrolled])
-
-    
+const Header = ({scrolled}) => {
   return (
     <>
-    <div className={`header ${scrolled?'white' : ""}`}>
+    <div className={`header ${scrolled?"" : "white"}`}>
     <div className="offer">
         <h4>Shipping within 48 Hours</h4>
     </div>
@@ -30,7 +15,7 @@ const Header = () => {
             <input type="search" placeholder='What are you looking for?' />
         </div>
         <div className="logo">
-            <img src={scrolled? "src/assets/Logo1.webp" : "src/assets/Logo2.webp"} alt="" />
+            <img src={scrolled? "src/assets/Logo2.webp" : "src/assets/Logo1.webp"} alt="" />
         </div>
         <div className="headLinks">
             <Link to={'Massage'}><img src="src/assets/massageIcon.png" alt="" /></Link>

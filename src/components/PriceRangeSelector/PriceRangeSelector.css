@@ -1,0 +1,46 @@
+.rangeBar{
+    padding-top: 10px;
+    display: flex;
+}
+.rangeValues{
+    padding-top: 10px;
+    display: flex;
+    gap: 100px;
+}
+.rangeValues input{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 120px;
+  height: 6px;
+  background-color: #5e5656;
+  pointer-events:none ;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5.5px solid black ;
+  }
+  
+input[type=range]::-moz-range-thumb {
+    pointer-events: all;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #C6C6C6;
+    cursor: pointer;  
+  }
+  
+  
+  

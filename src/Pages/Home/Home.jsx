@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 const Home = () => {
 
-  const [scrolled, setScrolled] = useState();
+  const [scrolled, setScrolled] = useState(true);
 
     const handleScroll = () => {
       if (window.scrollY > 30) {

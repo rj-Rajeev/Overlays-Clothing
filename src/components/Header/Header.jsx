@@ -27,10 +27,10 @@ const Header = ({scrolled}) => {
         <div className="NavLinks">
             <hr />
             <Link to={'/'}>Home</Link>
-            <Link to={'all-products'}>ShopAll</Link>
-            <Link to={'Mens'}>Men</Link>
-            <Link to={'Womens'}>Women</Link>
-            <Link to={'contact-us'}>Get In Touch!</Link>
+            <Link to={'/all-products'}>ShopAll</Link>
+            <Link to={'/Mens'}>Men</Link>
+            <Link to={'/Womens'}>Women</Link>
+            <Link to={'/contact-us'}>Get In Touch!</Link>
         </div>
     </div>
     </>

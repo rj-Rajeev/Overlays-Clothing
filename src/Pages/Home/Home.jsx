@@ -3,6 +3,7 @@ import './Home.css'
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Footer from '../../components/Footer/Footer';
 import { useState, useEffect } from 'react';
+import all_product from "../../assets/Overlays Products/all_product";
 
 const Home = () => {
 
@@ -22,7 +23,7 @@ const Home = () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, [handleScroll]);
-
+    // console.log(all_product);
 
   return (
     <> 
@@ -33,16 +34,9 @@ const Home = () => {
       <div className="bgi">
       </div>
       <div className="productshow">
-      <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
+      <div className="product"><ProductCard />
+      
+      </div>
       </div>
       <div className="banner2">
         <img src="src/assets/banner02-dekstop.webp" alt="" />
@@ -55,16 +49,9 @@ const Home = () => {
         <img src="src/assets/banner03-dekstop.webp" alt="" />
       </div>
       <div className="productshow">
-      <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
-        <div className="product"><ProductCard /></div>
+        <div className="product"><ProductCard />
+        
+        </div>
       </div>
       <div className="banner4">
         <img src="src/assets/banner04-dekstop.webp" alt="" />

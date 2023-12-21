@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Collections.css'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer';
@@ -8,12 +8,38 @@ import PriceRangeSelector from '../../components/PriceRangeSelector/PriceRangeSe
 
 
 const Collections = () => {
+  const [scrolled, setScrolled] = useState(true);
+  const [prev, setPrev] = useState(true);
 
-  useEffect(() => {
-    window.addEventListener('scroll',(e)=>{
-      console.log(e);
-    })
-  }, [])
+    const handleScroll = () => {
+      if (window.scrollY > 100 && window.scrollY < 2200) {
+        setScrolled(false);
+      } else {
+        setScrolled(true);
+      }
+    };
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, [handleScroll]);
+
+    const handlePrev = () => {
+      if (window.scrollY > 2170) {
+        setPrev(false);
+      } else {
+        setPrev(true);
+      }
+    };
+    useEffect(() => {
+      window.addEventListener('scroll', handlePrev);
+      
+      return () => {
+        window.removeEventListener('scroll', handlePrev);
+      };
+    }, [handleScroll]);
   
   return (
     <>
@@ -22,7 +48,7 @@ const Collections = () => {
       <h1>All Products</h1>
     </div>
     <div className="productSection">
-      <div className="filters">
+      <div className={`filters ${scrolled?"":"filter-fixed"}  ${prev?"":"filter-fixed2"}`}>
         <h1>filters</h1>
         <div className="priceFilter">
           <PriceRangeSelector />
@@ -74,3 +100,4 @@ const Collections = () => {
 }
 
 export default Collections
+

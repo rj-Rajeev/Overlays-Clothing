@@ -15,9 +15,6 @@
 .header.white .head{
     background: rgb(255, 255, 255);
     border-bottom: 1px solid black;
-    transition: all ease 1s;
-
-    
 }
 .head{
     width: 100vw;
@@ -90,7 +87,6 @@
 .header.white .headLinks .counter{
     background-color: black;
     color: white;
-    transition: all ease 1s;
 }
 
 .header.white .headLinks img, .search img{
@@ -116,7 +112,6 @@
 .header.white .NavLinks{
 
     background: white;
-    transition: all ease 1s;
 }
 .header.white .NavLinks a{
     color: black;
@@ -129,6 +124,7 @@
     align-items: center;
     justify-content: center;
     gap: 4%;
+    border-bottom: .8px solid rgb(119, 111, 111);
 }
 
 .NavLinks a{

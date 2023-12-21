@@ -18,9 +18,9 @@ const Header = ({scrolled}) => {
             <img src={scrolled? "src/assets/Logo2.webp" : "src/assets/Logo1.webp"} alt="" />
         </div>
         <div className="headLinks">
-            <Link to={'Massage'}><img src="src/assets/massageIcon.png" alt="" /></Link>
-            <Link to={'Profile'}><img src="src/assets/accountIcon.png" alt="" /></Link>
-            <Link to={'Cart'}><img src="src/assets/cartIcon.png" alt="" /></Link>
+            <Link to={'/Massage'}><img src="src/assets/massageIcon.png" alt="" /></Link>
+            <Link to={'/Profile'}><img src="src/assets/accountIcon.png" alt="" /></Link>
+            <Link to={'/Cart'}><img src="src/assets/cartIcon.png" alt="" /></Link>
             <div className="counter">0</div>
         </div>
        </div>

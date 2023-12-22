@@ -13,12 +13,15 @@
 }
 .productCard .productImg img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
 .productCard h2{
     color: black;
     text-align: center;
+    font-size: 12px;
+    padding-top: 10px;
 }
 button{
     padding: 10px 20px;

@@ -5,9 +5,9 @@ import Footer from '../../components/Footer/Footer';
 import ProductCard from '../../components/ProductCard/ProductCard'
 import DeliveryInfoCard from '../../components/DeliveryInfoCard/DeliveryInfoCard'
 import PriceRangeSelector from '../../components/PriceRangeSelector/PriceRangeSelector'
+import all_products from '../../assets/Overlays Products/all_product';
 
-
-const Collections = () => {
+const Collections = ({headLine, category}) => {
   const [scrolled, setScrolled] = useState(true);
   const [prev, setPrev] = useState(true);
 
@@ -40,12 +40,27 @@ const Collections = () => {
         window.removeEventListener('scroll', handlePrev);
       };
     }, [handleScroll]);
+
+    const [filterProducts,setFilterProducts] = useState([]);
+
+    useEffect(()=>{
+      if(category=="all"){
+        setFilterProducts(all_products);
+      } else if(category=='men'){
+        const mensProducts = all_products.filter((product)=>product.category==='men');
+        setFilterProducts(mensProducts);
+      } else {
+        const womensProducts = all_products.filter((product)=>product.category==='women');
+        setFilterProducts(womensProducts);
+
+      }
+    },[category])
   
   return (
     <>
     <div className="collections">
       <Header/>
-      <h1>All Products</h1>
+      <h1>{headLine}</h1>
     </div>
     <div className="productSection">
       <div className={`filters ${scrolled?"":"filter-fixed"}  ${prev?"":"filter-fixed2"}`}>
@@ -67,24 +82,9 @@ const Collections = () => {
           <h5>Sort by Featured</h5>
         </div>
         <div className="productsCards">
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
+        {filterProducts.map((product) => (              
+              <ProductCard key={product.id} product={product} />
+         ))}
         </div>
 
       </div>

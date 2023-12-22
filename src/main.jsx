@@ -17,31 +17,31 @@ const router = createBrowserRouter([
     element: <Home/>
   },
   {
-    path: "all-products",
-    element: <Collections headLine = 'All Products'/>
+    path: "/all-products",
+    element: <Collections headLine = 'All Products' category = 'all'/>
   },
   {
-    path: "Mens",
-    element: <div>Hey Mens here</div>
+    path: "/Mens",
+    element: <Collections headLine = 'Mens Products' category = 'men'/>
   },
   {
-    path: "Womens",
-    element: <div>Hey Womens here</div>
+    path: "/Womens",
+    element: <Collections headLine = 'Womens Products' category = 'women'/>
   },
   {
-    path: "contact-us",
+    path: "/contact-us",
     element: <ContactUs/>
   },
   {
-    path: "SignUp",
+    path: "/SignUp",
     element: <SignUp/>
   },
   {
-    path: "Login",
+    path: "/Login",
     element: <Login/>
   },
   {
-    path: "Cart",
+    path: "/Cart",
     element: <Cart />
   },
 ]);

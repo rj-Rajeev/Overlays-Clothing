@@ -1,0 +1,17 @@
+
+.contact-us {
+    width: 100vw;
+}
+
+.contact-us h1{
+    text-align: center;
+    margin-top: 15%;
+}
+.contact-us p{
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+}
+.contact-us p span{
+    text-decoration: underline;
+}

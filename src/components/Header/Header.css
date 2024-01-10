@@ -82,7 +82,10 @@
     margin-right: 2%;
     gap: 10px;
     position: relative;
+}
 
+.headLinks img{
+    cursor: pointer;
 }
 .header.white .headLinks .counter{
     background-color: black;

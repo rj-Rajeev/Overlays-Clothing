@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 50px;
     padding-bottom: 10px;
+    background-color: #dadada;
 }
 .content h5{
     margin: 0px 0px 40px 0px;
@@ -31,4 +32,6 @@
 }
 .copyright{
     text-align: center;
+    padding: 0;
+    background-color: #dadada;
 }

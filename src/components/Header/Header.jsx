@@ -1,8 +1,36 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
+import Cart from '../Cart/Cart';
+import { OfferPopup } from '../OfferPopup/OfferPopup';
+import { useCart } from '../../contexts/cartContext';
 
 const Header = ({scrolled}) => {
+  const[popupActive, setPopupActive] = useState(false);
+  const[subPopupActive, setSubPopupActive] = useState(false);
+  const {cartItems} = useCart();
+  
+    /* const [scrolled, setScrolled] = useState(true);
+
+  const handleScroll = () => {
+    if (window.scrollY > 30) {
+      setScrolled(false);
+    } else {
+      setScrolled(true);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]); */
+  
+  const popupHandle = ()=>{
+    setPopupActive((prev)=>!prev);
+  }
+  
   return (
     <>
     <div className={`header ${scrolled?"" : "white"}`}>
@@ -18,10 +46,10 @@ const Header = ({scrolled}) => {
             <img src={scrolled? "src/assets/Logo2.webp" : "src/assets/Logo1.webp"} alt="" />
         </div>
         <div className="headLinks">
-            <Link to={'/Massage'}><img src="src/assets/massageIcon.png" alt="" /></Link>
+            <Link><img src="src/assets/massageIcon.png" alt="" onClick={()=>setSubPopupActive(true)} /></Link>
             <Link to={'/Profile'}><img src="src/assets/accountIcon.png" alt="" /></Link>
-            <Link to={'/Cart'}><img src="src/assets/cartIcon.png" alt="" /></Link>
-            <div className="counter">0</div>
+            <img src="src/assets/cartIcon.png" alt="" onClick={popupHandle} />
+            <div className="counter">{cartItems.length}</div>
         </div>
        </div>
         <div className="NavLinks">
@@ -33,6 +61,8 @@ const Header = ({scrolled}) => {
             <Link to={'/contact-us'}>Get In Touch!</Link>
         </div>
     </div>
+    {<Cart popupActive={popupActive} setPopupActive={setPopupActive} />}
+    {<OfferPopup popupActive={subPopupActive} setPopupActive={setSubPopupActive} />}
     </>
     )
 }

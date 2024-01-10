@@ -7,6 +7,7 @@ import DeliveryInfoCard from '../../components/DeliveryInfoCard/DeliveryInfoCard
 import PriceRangeSelector from '../../components/PriceRangeSelector/PriceRangeSelector'
 import all_products from '../../assets/Overlays Products/all_product';
 
+
 const Collections = ({headLine, category}) => {
   const [scrolled, setScrolled] = useState(true);
   const [prev, setPrev] = useState(true);
@@ -59,7 +60,6 @@ const Collections = ({headLine, category}) => {
   return (
     <>
     <div className="collections">
-      <Header/>
       <h1>{headLine}</h1>
     </div>
     <div className="productSection">
@@ -92,9 +92,6 @@ const Collections = ({headLine, category}) => {
     <hr />
     <DeliveryInfoCard/>
     <hr />
-    <div className="homefotter">
-        {<Footer />}
-      </div>
     </>
     )
 }
